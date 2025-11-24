@@ -16,14 +16,26 @@ public class TestAutoIncremente {
         Utilisateur u1 = new Utilisateur();
         u1.setNom("Samba");
         u1.setEmail("palaye068@icloud.com");
-        em.persist(u1);
-        em.getTransaction().commit();
 
+        Profil p1 = new Profil();
+        p1.setBio("Directeur");
+        p1.setTelephone("772690946");
+        p1.setPhoto("Palaye.jpg");
+        u1.setProfil(p1);
+
+
+        // em.persist(p1);
+        em.persist(u1);
+
+
+        em.getTransaction().commit();
         em.getTransaction().begin();
         Utilisateur u2 = new Utilisateur();
         u2.setNom("Mbacke");
         u2.setEmail("mbacké@icloud.com");
         em.persist(u2);
+
+        em.remove(u1); // Supprime l'entite dans la base de donnee
         em.getTransaction().commit();
 
         em.close();
