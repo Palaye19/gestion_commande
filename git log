@@ -1,0 +1,11 @@
+[33mcommit 87c65b43178359863eed4fa7b7f76eef936cdfef[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/add_maven_dependencies[m[33m, [m[1;32madd_maven_dependencies[m[33m)[m
+Author: Palaye19 <palaye068@icloud.com>
+Date:   Mon Nov 24 11:54:27 2025 +0000
+
+    Ajout depedance Maven
+
+[33mcommit 71e2d29b1d3563a51ade88d0621ae887787474b2[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: Palaye19 <palaye068@icloud.com>
+Date:   Mon Nov 24 10:00:17 2025 +0000
+
+    Premier commit
