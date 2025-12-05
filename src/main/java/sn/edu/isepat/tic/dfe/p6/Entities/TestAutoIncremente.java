@@ -23,10 +23,8 @@ public class TestAutoIncremente {
         p1.setPhoto("Palaye.jpg");
         u1.setProfil(p1);
 
-
         // em.persist(p1);
         em.persist(u1);
-
 
         em.getTransaction().commit();
         em.getTransaction().begin();

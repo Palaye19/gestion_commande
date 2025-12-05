@@ -1,5 +1,4 @@
 package sn.edu.isepat.tic.dfe.p6.Entities;
-
 import jakarta.persistence.*;
 
 @Entity

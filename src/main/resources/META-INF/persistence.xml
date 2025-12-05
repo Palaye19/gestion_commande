@@ -9,6 +9,8 @@
         <!-- Vos entités -->
         <class>sn.edu.isepat.tic.dfe.p6.Entities.Utilisateur</class>
         <class>sn.edu.isepat.tic.dfe.p6.Entities.Profil</class>
+        <class>sn.edu.isepat.tic.dfe.p6.Entities.categorie</class>
+        <class>sn.edu.isepat.tic.dfe.p6.Entities.produit</class>
 
         <properties>
             <!-- JDBC -->
