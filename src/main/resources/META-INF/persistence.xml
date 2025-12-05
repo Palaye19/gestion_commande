@@ -11,6 +11,7 @@
         <class>sn.edu.isepat.tic.dfe.p6.Entities.Profil</class>
         <class>sn.edu.isepat.tic.dfe.p6.Entities.Categorie</class>
         <class>sn.edu.isepat.tic.dfe.p6.Entities.Produit</class>
+        <class>sn.edu.isepat.tic.dfe.p6.Entities.Commande</class>
 
         <properties>
             <!-- JDBC -->

@@ -1,6 +1,8 @@
 package sn.edu.isepat.tic.dfe.p6.Entities;
 
 import jakarta.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "produit")
@@ -14,21 +16,25 @@ public class Produit {
     private double prix;
     private int stock;
 
+    // ----------------- Relation Many-to-One avec Categorie -----------------
     @ManyToOne
     @JoinColumn(name = "categorie_id")
     private Categorie categorie;
 
-    public Produit(){
+    // ----------------- Relation Many-to-Many avec Commande -----------------
+    @ManyToMany(mappedBy = "produits")
+    private List<Commande> commandes = new ArrayList<>();
 
-    }
+    // ----------------- Constructeurs -----------------
+    public Produit() {}
 
-    // --- Constructeur pratique ---
     public Produit(String nom, double prix, int stock) {
         this.nom = nom;
         this.prix = prix;
         this.stock = stock;
     }
-    // --- GETTERS & SETTERS ---
+
+    // ----------------- Getters / Setters -----------------
     public Long getId() {
         return id;
     }
@@ -67,5 +73,29 @@ public class Produit {
 
     public void setCategorie(Categorie categorie) {
         this.categorie = categorie;
+    }
+
+    public List<Commande> getCommandes() {
+        return commandes;
+    }
+
+    public void setCommandes(List<Commande> commandes) {
+        this.commandes = commandes;
+    }
+
+    // ----------------- Méthodes pratiques -----------------
+
+    public void ajouterCommande(Commande commande) {
+        if (commande != null && !commandes.contains(commande)) {
+            commandes.add(commande);
+            commande.getProduits().add(this); // Bidirectionnel
+        }
+    }
+
+    public void retirerCommande(Commande commande) {
+        if (commande != null && commandes.contains(commande)) {
+            commandes.remove(commande);
+            commande.getProduits().remove(this); // Bidirectionnel
+        }
     }
 }
