@@ -18,6 +18,16 @@ public class Produit {
     @JoinColumn(name = "categorie_id")
     private Categorie categorie;
 
+    public Produit(){
+
+    }
+
+    // --- Constructeur pratique ---
+    public Produit(String nom, double prix, int stock) {
+        this.nom = nom;
+        this.prix = prix;
+        this.stock = stock;
+    }
     // --- GETTERS & SETTERS ---
     public Long getId() {
         return id;

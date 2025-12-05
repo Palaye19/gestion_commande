@@ -26,6 +26,15 @@ public class Categorie {
         }
     }
 
+    // Constructeur avec zero argument
+    public Categorie(){
+    }
+
+    // --- Constructeur
+    public Categorie(String nom, String description) {
+        this.nom = nom;
+        this.description = description;
+    }
 
     public Long getId() {
         return id;
